@@ -1,1 +1,28 @@
-<p>New Text</p>
+<md-content>
+    <!-- <div flex-xs flex-gt-xs="50" layout="column"> -->
+    <!-- show material design loader -->
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h3>
+          <span>Flickr Photo Search</span>
+        </h3>
+      </div>
+    </md-toolbar>
+    <br />
+    <md-input-container>
+      <input id="flickr-search" placeholder="Search by tag or comma separated tags..." ng-model="tag"></input>
+      <md-button type="button" class="md-raised" id="flickr-search-button" ng-click="search(tag)">Search</md-button>
+    <md-input-container>
+    <div class='md-padding' layout="row" layout-wrap>
+        <md-card style="width: 300px;" ng-repeat="photo in photos">
+            <md-card-title style="width: 300px;">
+                <md-card-header>
+                    <span class="md-headline" wrap>{{photo.title}}</span>
+                </md-card-header>
+            </md-card-title>
+            <md-card-content flex="50">
+                <img ng-src="{{photo.media.m}}" class="md-card-image">
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>
