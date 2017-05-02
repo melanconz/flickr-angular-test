@@ -13,10 +13,8 @@ angular.module('imageGridDisplay').component('imageGridDisplay', {
                 $scope.loading = true;
                 var promise = Images.search(search);
                 promise.then(function(data) {
-                    console.log("Data", data.items);
                     $scope.photos = data.items;
                     $scope.loading = false;
-
                 }, function(err) {
                     console.log('Failed: ' + err);
                     $scope.loading = false;
