@@ -14,13 +14,14 @@
       <md-button type="button" class="md-raised" id="flickr-search-button" ng-click="search(tag)">Search</md-button>
     <md-input-container>
     <div class='md-padding' layout="row" layout-wrap>
-        <md-card style="width: 300px;" ng-repeat="photo in photos">
+        <md-progress-linear ng-show="loading" md-mode="indeterminate"></md-progress-linear>
+        <md-card style="width: 350px;" ng-show="!loading" ng-repeat="photo in photos">
             <md-card-title style="width: 300px;">
-                <md-card-header>
-                    <span class="md-headline" wrap>{{photo.title}}</span>
-                </md-card-header>
+                <md-card-title-text style="text-align: center;" md-head>
+                    {{photo.title}}
+                </md-card-title-text>
             </md-card-title>
-            <md-card-content flex="50">
+            <md-card-content style="text-align: center;">
                 <img ng-src="{{photo.media.m}}" class="md-card-image">
             </md-card-content>
         </md-card>
