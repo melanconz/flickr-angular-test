@@ -11,7 +11,6 @@ angular.module('core.images',['ngResource'])
             url += '?format=json&&jsoncallback=JSON_CALLBACK&lang=en-us&tag_mode=any';
 
             if ((search != null && search.length > 0)) {
-              console.log(search);
                 url += '&tags=' + search;
             }
 
