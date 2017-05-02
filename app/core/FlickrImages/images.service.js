@@ -6,7 +6,6 @@ angular.module('core.images',['ngResource'])
         self.base_url= "https://api.flickr.com/services/feeds/photos_public.gne";
 
         self.search = function(search){
-        console.log(search);
             var deferred = $q.defer();
             var url = self.base_url;
             url += '?format=json&&jsoncallback=JSON_CALLBACK&lang=en-us&tag_mode=any';
